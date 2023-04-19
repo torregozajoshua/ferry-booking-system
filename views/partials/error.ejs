@@ -1,0 +1,19 @@
+<% if(typeof errors != 'undefined') {%>
+    <% errors.forEach((error) => {%>
+        <style>
+            .container{
+                height: 700px;
+            }
+            h4{
+                /* background-color: #ff3333; */
+                border: 1px solid #ff3333;
+                border-radius: 3px;
+                padding: 10px 10px;
+                margin: 10px 20px;
+                color: #ff3333;
+                text-align: center;
+            }
+        </style>
+        <h4 style="margin-left: 20px; padding-bottom: 0; padding-top:0; margin-top:0; margin-bottom: 0;"><%= error %></h4>
+    <%});%>
+<%}%>

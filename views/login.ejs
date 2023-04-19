@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head') %>
+<body>
+    <div class="container" style="height: 375px;">
+        <h1>Login</h1>
+        <h2 class=alertMessage><%- include('partials/error')%></h2>
+        <form action="/login" method="POST">
+            <label>Username</label>
+            <input type="text" name="username" id="username" value="<%= typeof username != 'undefined' ? username : '' %>">
+            <label>Password</label>
+            <input type="password" name="password" id="password">
+            <button type="submit" id="submit">Log in</button>
+            <p>Don't have an account? <a href="/user/new">Sign Up</a></p>
+        </form>
+    </div>
+</body>
+</html>
